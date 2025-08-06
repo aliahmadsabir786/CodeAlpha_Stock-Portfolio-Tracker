@@ -1,3 +1,4 @@
+# ✅ Predefined stock prices dictionary
 stock_price = {
     "APPLE": 140,
     "AMAZON": 207,
@@ -6,9 +7,9 @@ stock_price = {
     "TESLA": 650,
     "TOYATA": 540
 }
-
+# 📦 Portfolio list to store each investment
 Portfolio = []
-
+# ➕ Add a stock to the portfolio
 def add_stock():
     stock_name = input("Enter stock symbol (e.g., APPLE, TESLA): ").upper()
     if stock_name not in stock_price:
@@ -28,7 +29,7 @@ def add_stock():
         print(f"✅ {stock_name} added successfully.\n")
     except ValueError:
         print("❌ Please enter a valid numeric quantity.\n")
-
+# 📊 Display the full portfolio
 def display_portfolio():
     if not Portfolio:
         print("📭 Portfolio is empty.\n")
@@ -43,7 +44,7 @@ def display_portfolio():
         grand_total += stock['total']
 
     print(f"\n💰 Total Investment Value: ${grand_total:.2f}\n")
-
+#  💾 Save portfolio to a .txt file
 def save_file(filename="Portfolio.txt"):
     if not Portfolio:
         print("📭 No data to save in the file.\n")
@@ -62,10 +63,10 @@ def save_file(filename="Portfolio.txt"):
         print(f"✅ Portfolio saved to {filename}\n")
     except Exception as e:
         print(f"❌ Error saving file: {e}")
-
+# 🧠 Main menu loop
 def main():
     while True:
-        print("=== 📊 Stock Portfolio Tracker ===")
+        print("=== 📊 Stock Portfolio Tracker By Ali Ahmad Sabir ===")
         print("1. Add Stock")
         print("2. View Portfolio")
         print("3. Save to File")
